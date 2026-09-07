@@ -180,7 +180,6 @@ export function App() {
         cartTotal={totalCartAmount}
         onOpenCart={() => setIsCartOpen(true)}
         onOpenMenu={() => setIsMenuOpen(true)}
-        onOpenPolicies={handleOpenPolicies}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
       />

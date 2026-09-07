@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, ShieldCheck, Phone, Mail, FileText, ChevronLeft } from 'lucide-react';
+import { X, Phone, Mail, ChevronLeft } from 'lucide-react';
 import { storeConfig } from '../config/store';
 import { Logo } from './Logo';
 
@@ -8,7 +8,7 @@ interface MenuDrawerProps {
   onClose: () => void;
   categories: string[];
   onSelectCategory: (cat: string) => void;
-  onOpenPolicies: (tab: 'returns' | 'shipping' | 'terms' | 'privacy') => void;
+  onOpenPolicies?: (tab: 'returns' | 'shipping' | 'terms' | 'privacy') => void;
 }
 
 export const MenuDrawer: React.FC<MenuDrawerProps> = ({
@@ -16,7 +16,6 @@ export const MenuDrawer: React.FC<MenuDrawerProps> = ({
   onClose,
   categories,
   onSelectCategory,
-  onOpenPolicies,
 }) => {
   if (!isOpen) return null;
 
@@ -61,33 +60,6 @@ export const MenuDrawer: React.FC<MenuDrawerProps> = ({
                   <ChevronLeft className="w-4 h-4 text-gray-400" />
                 </button>
               ))}
-            </div>
-          </div>
-
-          {/* Policies & Links */}
-          <div className="pt-4 border-t border-gray-100">
-            <h4 className="text-xs font-black text-gray-400 uppercase tracking-wider mb-2">السياسات والضمان</h4>
-            <div className="space-y-1">
-              <button
-                onClick={() => {
-                  onOpenPolicies('returns');
-                  onClose();
-                }}
-                className="w-full flex items-center justify-between text-right p-2.5 rounded-xl hover:bg-gray-100 text-xs font-bold text-gray-700"
-              >
-                <span>سياسة الاستبدال والاسترجاع</span>
-                <FileText className="w-4 h-4 text-[#347b42]" />
-              </button>
-              <button
-                onClick={() => {
-                  onOpenPolicies('shipping');
-                  onClose();
-                }}
-                className="w-full flex items-center justify-between text-right p-2.5 rounded-xl hover:bg-gray-100 text-xs font-bold text-gray-700"
-              >
-                <span>الشحن والضمان والتوصيل</span>
-                <FileText className="w-4 h-4 text-[#347b42]" />
-              </button>
             </div>
           </div>
 

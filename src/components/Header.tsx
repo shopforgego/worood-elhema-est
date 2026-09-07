@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, ShoppingBag, Menu, User, Phone, ShieldCheck } from 'lucide-react';
+import { Search, ShoppingBag, Menu, Phone, ShieldCheck } from 'lucide-react';
 import { storeConfig } from '../config/store';
 import { Logo } from './Logo';
 
@@ -8,7 +8,6 @@ interface HeaderProps {
   cartTotal: number;
   onOpenCart: () => void;
   onOpenMenu: () => void;
-  onOpenPolicies: (tab: 'returns' | 'shipping' | 'terms' | 'privacy') => void;
   searchQuery: string;
   setSearchQuery: (query: string) => void;
 }
@@ -18,7 +17,6 @@ export const Header: React.FC<HeaderProps> = ({
   cartTotal,
   onOpenCart,
   onOpenMenu,
-  onOpenPolicies,
   searchQuery,
   setSearchQuery,
 }) => {
@@ -66,15 +64,8 @@ export const Header: React.FC<HeaderProps> = ({
             </a>
           </div>
 
-          {/* Left Section: User icon + Cart */}
+          {/* Left Section: Cart */}
           <div className="flex items-center gap-2 sm:gap-4">
-            <button
-              onClick={() => onOpenPolicies('returns')}
-              className="p-2 text-gray-600 hover:text-[#347b42] rounded-lg hover:bg-gray-100 transition hidden sm:flex items-center"
-              title="الضمان والسياسات"
-            >
-              <User className="w-5 h-5" />
-            </button>
 
             <button
               onClick={onOpenCart}
