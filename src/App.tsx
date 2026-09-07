@@ -103,7 +103,7 @@ export function App() {
   const totalCartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col">
+    <div className="min-h-screen bg-[#090d16] text-slate-100 flex flex-col">
       <Header
         cartCount={totalCartCount}
         onOpenCart={() => setIsCartOpen(true)}
