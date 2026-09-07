@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, ShoppingCart, ShieldCheck, Check, MessageCircle } from 'lucide-react';
+import { X, ShoppingBag, ShieldCheck, Check, MessageCircle } from 'lucide-react';
 import { Product } from '../types/store';
 import { storeConfig } from '../config/store';
 
@@ -33,11 +33,11 @@ export const ProductModal: React.FC<ProductModalProps> = ({
   );
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-      <div className="relative bg-[#0f1b12] border border-[#3d7a46]/50 rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl animate-in fade-in zoom-in duration-200 text-white">
+    <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+      <div className="relative bg-white border border-gray-200 rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl animate-in fade-in zoom-in duration-200 text-gray-900">
         <button
           onClick={onClose}
-          className="absolute top-4 left-4 z-10 p-2 bg-[#132216] hover:bg-[#1a2f1f] text-slate-300 rounded-full transition border border-slate-700"
+          className="absolute top-4 left-4 z-10 p-2 bg-gray-100 hover:bg-gray-200 text-gray-600 rounded-full transition"
         >
           <X className="w-5 h-5" />
         </button>
@@ -45,11 +45,11 @@ export const ProductModal: React.FC<ProductModalProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 sm:p-8">
           {/* Gallery */}
           <div className="flex flex-col gap-3">
-            <div className="h-72 sm:h-80 bg-[#0a120c] rounded-2xl overflow-hidden border border-[#3d7a46]/30">
+            <div className="h-72 sm:h-80 bg-[#f8f9fa] rounded-2xl overflow-hidden border border-gray-200 p-4 flex items-center justify-center">
               <img
                 src={selectedImg}
                 alt={product.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
             {images.length > 1 && (
@@ -58,11 +58,11 @@ export const ProductModal: React.FC<ProductModalProps> = ({
                   <button
                     key={i}
                     onClick={() => setSelectedImg(img)}
-                    className={`w-16 h-16 rounded-xl overflow-hidden border-2 flex-shrink-0 ${
-                      selectedImg === img ? 'border-[#4ea259]' : 'border-slate-800'
+                    className={`w-16 h-16 rounded-xl overflow-hidden border-2 flex-shrink-0 bg-[#f8f9fa] p-1 ${
+                      selectedImg === img ? 'border-[#347b42]' : 'border-gray-200'
                     }`}
                   >
-                    <img src={img} alt="" className="w-full h-full object-cover" />
+                    <img src={img} alt="" className="w-full h-full object-contain" />
                   </button>
                 ))}
               </div>
@@ -72,62 +72,62 @@ export const ProductModal: React.FC<ProductModalProps> = ({
           {/* Details */}
           <div className="flex flex-col justify-between">
             <div>
-              <div className="flex items-center gap-2 text-xs text-emerald-400 font-bold mb-2">
-                <span>{product.category}</span>
-                {product.brand && <span>• {product.brand}</span>}
-                {product.sku && <span className="text-slate-400 font-mono">({product.sku})</span>}
+              <div className="flex items-center gap-2 text-xs text-[#347b42] font-bold mb-2">
+                <span className="bg-emerald-50 px-2 py-0.5 rounded">{product.category}</span>
+                {product.brand && <span className="bg-gray-100 text-gray-700 px-2 py-0.5 rounded">• {product.brand}</span>}
+                {product.sku && <span className="text-gray-400 font-mono">({product.sku})</span>}
               </div>
 
-              <h2 className="text-xl sm:text-2xl font-black text-white mb-3 leading-snug">
+              <h2 className="text-lg sm:text-xl font-black text-gray-900 mb-3 leading-snug">
                 {product.title}
               </h2>
 
               <div className="flex items-baseline gap-3 mb-4">
-                <span className="text-2xl sm:text-3xl font-black text-emerald-400 font-mono">
+                <span className="text-2xl sm:text-3xl font-black text-[#347b42] font-mono">
                   {product.price.toFixed(2)} {storeConfig.currencySymbol}
                 </span>
                 {product.regular_price && product.regular_price > product.price && (
-                  <span className="text-sm text-slate-500 line-through">
+                  <span className="text-sm text-red-500 line-through">
                     {product.regular_price.toFixed(2)} {storeConfig.currencySymbol}
                   </span>
                 )}
-                <span className="text-xs text-slate-400">شامل الضريبة والشحن</span>
+                <span className="text-xs text-gray-400">شامل الضريبة والشحن</span>
               </div>
 
-              <div className="bg-[#132216] border border-[#3d7a46]/30 rounded-2xl p-4 mb-4">
-                <h4 className="text-xs font-bold text-slate-300 mb-1.5">تفاصيل القطعة ومواصفاتها:</h4>
-                <p className="text-xs text-slate-400 leading-relaxed max-h-36 overflow-y-auto">
+              <div className="bg-[#f8f9fa] border border-gray-200 rounded-2xl p-4 mb-4">
+                <h4 className="text-xs font-bold text-gray-700 mb-1.5">وصف القطعة والمواصفات:</h4>
+                <p className="text-xs text-gray-600 leading-relaxed max-h-36 overflow-y-auto">
                   {product.description}
                 </p>
               </div>
 
               {/* Badges */}
-              <div className="grid grid-cols-2 gap-2 text-[11px] text-slate-300 mb-6">
+              <div className="grid grid-cols-2 gap-2 text-[11px] text-gray-600 mb-6">
                 <div className="flex items-center gap-1.5">
-                  <Check className="w-4 h-4 text-emerald-400" />
+                  <Check className="w-4 h-4 text-[#347b42]" />
                   <span>متوفر في المستودع جاهز للشحن</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <ShieldCheck className="w-4 h-4 text-amber-400" />
+                  <ShieldCheck className="w-4 h-4 text-[#347b42]" />
                   <span>ضمان أصالة وأداء معتمد</span>
                 </div>
               </div>
             </div>
 
             {/* Actions */}
-            <div className="space-y-3 pt-4 border-t border-slate-800">
+            <div className="space-y-3 pt-4 border-t border-gray-200">
               <div className="flex items-center gap-3">
-                <div className="flex items-center bg-[#0a120c] border border-slate-700 rounded-xl">
+                <div className="flex items-center bg-gray-100 border border-gray-200 rounded-xl">
                   <button
                     onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                    className="px-3 py-2 text-slate-300 hover:text-white font-bold"
+                    className="px-3 py-2 text-gray-700 hover:text-black font-bold"
                   >
                     -
                   </button>
-                  <span className="px-3 py-2 text-sm font-bold text-emerald-400">{quantity}</span>
+                  <span className="px-3 py-2 text-sm font-bold text-[#347b42]">{quantity}</span>
                   <button
                     onClick={() => setQuantity(quantity + 1)}
-                    className="px-3 py-2 text-slate-300 hover:text-white font-bold"
+                    className="px-3 py-2 text-gray-700 hover:text-black font-bold"
                   >
                     +
                   </button>
@@ -135,9 +135,9 @@ export const ProductModal: React.FC<ProductModalProps> = ({
 
                 <button
                   onClick={handleAdd}
-                  className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-[#3d7a46] to-[#2e5c35] hover:from-[#478f52] hover:to-[#386e40] text-white font-black py-3 px-6 rounded-xl shadow-lg shadow-[#3d7a46]/30 transition transform active:scale-95 text-sm border border-[#4ea259]/40"
+                  className="flex-1 flex items-center justify-center gap-2 bg-[#347b42] hover:bg-[#2d6838] text-white font-black py-3 px-6 rounded-xl shadow transition transform active:scale-95 text-sm"
                 >
-                  <ShoppingCart className="w-5 h-5" />
+                  <ShoppingBag className="w-5 h-5" />
                   <span>إضافة إلى السلة ({ (product.price * quantity).toFixed(2) } {storeConfig.currencySymbol})</span>
                 </button>
               </div>
@@ -146,9 +146,9 @@ export const ProductModal: React.FC<ProductModalProps> = ({
                 href={`https://wa.me/${storeConfig.whatsapp}?text=${whatsappMessage}`}
                 target="_blank"
                 rel="noreferrer"
-                className="w-full flex items-center justify-center gap-2 bg-[#132216] hover:bg-[#1a2f1f] text-emerald-300 border border-[#3d7a46]/50 py-2.5 px-4 rounded-xl text-xs font-bold transition"
+                className="w-full flex items-center justify-center gap-2 bg-emerald-50 hover:bg-emerald-100 text-[#347b42] border border-[#347b42]/30 py-2.5 px-4 rounded-xl text-xs font-bold transition"
               >
-                <MessageCircle className="w-4 h-4 text-emerald-400" />
+                <MessageCircle className="w-4 h-4 text-[#347b42]" />
                 <span>فحص التوافق برقم الهيكل (VIN) عبر واتساب</span>
               </a>
             </div>

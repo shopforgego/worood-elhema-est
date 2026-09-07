@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShoppingBag, Eye, Star, MessageCircle, ShieldCheck } from 'lucide-react';
+import { ShoppingBag, Eye, Star } from 'lucide-react';
 import { Product } from '../types/store';
 import { storeConfig } from '../config/store';
 
@@ -18,101 +18,97 @@ export const ProductCard: React.FC<ProductCardProps> = ({
     ? Math.round(((product.regular_price - product.price) / product.regular_price) * 100)
     : 0;
 
-  const whatsappMessage = encodeURIComponent(
-    `السلام عليكم، أريد الاستفسار عن توافق قطعة الغيار التالية:\nاسم القطعة: ${product.title}\nالكود (SKU): ${product.sku || product.id}\nالسعر: ${product.price} ر.س`
-  );
-
   return (
-    <div className="group bg-[#111c13] border border-[#3d7a46]/30 hover:border-[#4ea259] shadow-lg hover:shadow-[#3d7a46]/20 rounded-2xl overflow-hidden transition-all duration-300 flex flex-col justify-between">
+    <div className="group bg-white border border-gray-200 hover:border-[#347b42]/50 shadow-sm hover:shadow-md rounded-2xl overflow-hidden transition-all duration-300 flex flex-col justify-between">
       <div>
-        {/* Image Box */}
-        <div className="relative h-56 bg-[#0a120c] overflow-hidden cursor-pointer" onClick={() => onSelect(product)}>
+        {/* Product Image */}
+        <div className="relative h-48 sm:h-52 bg-[#fcfcfc] overflow-hidden cursor-pointer p-2 flex items-center justify-center border-b border-gray-100" onClick={() => onSelect(product)}>
           <img
             src={product.main_image || product.image}
             alt={product.title}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
             loading="lazy"
           />
+          
+          {/* Discount Badge */}
           {discount > 0 && (
-            <div className="absolute top-3 right-3 bg-amber-500 text-slate-950 font-black text-[10px] px-2 py-0.5 rounded shadow">
-              خصم {discount}%
+            <div className="absolute top-2.5 right-2.5 bg-red-600 text-white font-black text-[10px] px-1.5 py-0.5 rounded shadow">
+              {discount}%
             </div>
           )}
-          <div className="absolute top-3 left-3 bg-black/70 backdrop-blur text-emerald-300 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-500/30 flex items-center gap-1">
-            <ShieldCheck className="w-3 h-3" />
-            {product.brand || "أصلي"}
-          </div>
-          {product.sku && (
-            <div className="absolute bottom-2 right-2 bg-black/70 text-slate-300 text-[9px] px-1.5 py-0.5 rounded font-mono">
-              {product.sku}
+
+          {/* Brand watermark or badge */}
+          {product.brand && product.brand !== 'None' && (
+            <div className="absolute top-2.5 left-2.5 bg-white/90 border border-gray-200 text-gray-700 text-[10px] font-extrabold px-1.5 py-0.5 rounded shadow-sm">
+              {product.brand}
             </div>
           )}
-          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+
+          <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
             <button
               onClick={(e) => {
                 e.stopPropagation();
                 onSelect(product);
               }}
-              className="p-3 bg-white text-slate-900 rounded-xl hover:scale-110 transition shadow-lg"
+              className="p-2.5 bg-white text-gray-800 rounded-xl hover:scale-110 transition shadow"
               title="عرض التفاصيل"
             >
-              <Eye className="w-5 h-5" />
+              <Eye className="w-4 h-4" />
             </button>
           </div>
         </div>
 
         {/* Content */}
-        <div className="p-4">
-          <div className="flex items-center justify-between gap-2 mb-1.5">
-            <span className="text-[11px] text-[#4ea259] font-bold truncate">{product.category}</span>
-            <div className="flex items-center gap-1 text-amber-400 text-[11px] font-bold">
-              <Star className="w-3 h-3 fill-current" />
-              <span>{product.rating || '4.9'}</span>
-            </div>
+        <div className="p-3.5">
+          {/* Category Tags */}
+          <div className="flex flex-wrap items-center gap-1.5 mb-2">
+            <span className="text-[10px] bg-gray-100 text-gray-600 px-2 py-0.5 rounded font-bold">
+              {product.category}
+            </span>
+            {product.compatibility && product.compatibility !== product.category && (
+              <span className="text-[10px] bg-emerald-50 text-[#347b42] px-2 py-0.5 rounded font-bold">
+                {product.compatibility}
+              </span>
+            )}
           </div>
 
+          {/* Title */}
           <h3
             onClick={() => onSelect(product)}
-            className="font-bold text-xs sm:text-sm text-slate-100 line-clamp-2 cursor-pointer hover:text-emerald-300 transition mb-2.5 leading-snug"
+            className="font-bold text-xs sm:text-[13px] text-gray-800 line-clamp-2 cursor-pointer hover:text-[#347b42] transition mb-2 leading-snug"
           >
             {product.title}
           </h3>
+
+          <div className="text-[11px] text-gray-400 font-medium mb-1">
+            شحن سريع مجاني
+          </div>
         </div>
       </div>
 
-      {/* Pricing & CTA */}
-      <div className="p-4 pt-0">
-        <div className="flex items-baseline gap-2 mb-3">
-          <span className="text-base sm:text-lg font-black text-emerald-400 font-mono">
-            {product.price.toFixed(2)} {storeConfig.currencySymbol}
-          </span>
-          {product.regular_price && product.regular_price > product.price && (
-            <span className="text-xs text-slate-500 line-through">
-              {product.regular_price.toFixed(2)} {storeConfig.currencySymbol}
+      {/* Pricing & CTA Button */}
+      <div className="p-3.5 pt-0">
+        <div className="flex items-baseline justify-between gap-2 mb-3">
+          <div className="flex items-baseline gap-1.5">
+            <span className="text-base sm:text-lg font-black text-gray-900 font-mono">
+              {product.price.toFixed(2)} ﷼
             </span>
-          )}
-          <span className="text-[10px] text-slate-400 mr-auto">شامل الضريبة</span>
+            {product.regular_price && product.regular_price > product.price && (
+              <span className="text-xs text-red-500 line-through font-mono">
+                {product.regular_price.toFixed(2)} ﷼
+              </span>
+            )}
+          </div>
         </div>
 
-        <div className="grid grid-cols-5 gap-2">
-          <button
-            onClick={() => onAddToCart(product)}
-            className="col-span-4 flex items-center justify-center gap-2 bg-gradient-to-r from-[#3d7a46] to-[#2e5c35] hover:from-[#478f52] hover:to-[#386e40] text-white font-black shadow-lg shadow-[#3d7a46]/20 py-2.5 px-3 rounded-xl transition text-xs border border-[#4ea259]/30 active:scale-95"
-          >
-            <ShoppingBag className="w-4 h-4" />
-            <span>إضافة للسلة</span>
-          </button>
-
-          <a
-            href={`https://wa.me/${storeConfig.whatsapp}?text=${whatsappMessage}`}
-            target="_blank"
-            rel="noreferrer"
-            className="col-span-1 flex items-center justify-center bg-[#132216] hover:bg-[#1a2f1f] text-emerald-400 hover:text-emerald-300 border border-[#3d7a46]/40 rounded-xl transition"
-            title="استفسار عبر واتساب"
-          >
-            <MessageCircle className="w-4 h-4" />
-          </a>
-        </div>
+        {/* Salla Style Full-Width Green Add to Cart Button */}
+        <button
+          onClick={() => onAddToCart(product)}
+          className="w-full flex items-center justify-center gap-1.5 bg-[#347b42] hover:bg-[#2d6838] active:bg-[#25572e] text-white font-black py-2.5 px-3 rounded-xl transition text-xs shadow-sm"
+        >
+          <ShoppingBag className="w-4 h-4" />
+          <span>أضف للسلة</span>
+        </button>
       </div>
     </div>
   );
