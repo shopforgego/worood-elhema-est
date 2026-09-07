@@ -18,9 +18,9 @@ export const PoliciesModal: React.FC<PoliciesModalProps> = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/85 backdrop-blur-sm flex items-center justify-center p-4">
-      <div className="relative bg-slate-900 border border-slate-800 rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl animate-in fade-in zoom-in duration-200">
-        <div className="p-4 sm:p-5 border-b border-slate-800 flex items-center justify-between bg-slate-950/60">
+    <div className="fixed inset-0 z-50 overflow-y-auto bg-[#0a120c]/85 backdrop-blur-sm flex items-center justify-center p-4">
+      <div className="relative bg-[#0f1b12] border border-[#3d7a46]/30 rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl animate-in fade-in zoom-in duration-200">
+        <div className="p-4 sm:p-5 border-b border-[#3d7a46]/30 flex items-center justify-between bg-[#0a120c]/60">
           <h3 className="font-extrabold text-base text-white">السياسات والضمان - {storeConfig.companyNameAr}</h3>
           <button onClick={onClose} className="p-1.5 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition">
             <X className="w-5 h-5" />
@@ -28,11 +28,11 @@ export const PoliciesModal: React.FC<PoliciesModalProps> = ({
         </div>
 
         {/* Tabs */}
-        <div className="flex border-b border-slate-800 bg-slate-950 text-xs overflow-x-auto">
+        <div className="flex border-b border-[#3d7a46]/30 bg-[#0a120c] text-xs overflow-x-auto">
           <button
             onClick={() => setActiveTab('returns')}
             className={`flex items-center gap-1.5 px-4 py-3 font-bold border-b-2 whitespace-nowrap transition ${
-              activeTab === 'returns' ? 'border-amber-500 text-amber-400 bg-slate-900/50' : 'border-transparent text-slate-400 hover:text-slate-200'
+              activeTab === 'returns' ? 'border-[#4ea259] text-emerald-400 bg-[#0f1b12]/50' : 'border-transparent text-slate-400 hover:text-slate-200'
             }`}
           >
             <RotateCcw className="w-4 h-4" />
@@ -41,7 +41,7 @@ export const PoliciesModal: React.FC<PoliciesModalProps> = ({
           <button
             onClick={() => setActiveTab('shipping')}
             className={`flex items-center gap-1.5 px-4 py-3 font-bold border-b-2 whitespace-nowrap transition ${
-              activeTab === 'shipping' ? 'border-amber-500 text-amber-400 bg-slate-900/50' : 'border-transparent text-slate-400 hover:text-slate-200'
+              activeTab === 'shipping' ? 'border-[#4ea259] text-emerald-400 bg-[#0f1b12]/50' : 'border-transparent text-slate-400 hover:text-slate-200'
             }`}
           >
             <Truck className="w-4 h-4" />
@@ -50,7 +50,7 @@ export const PoliciesModal: React.FC<PoliciesModalProps> = ({
           <button
             onClick={() => setActiveTab('terms')}
             className={`flex items-center gap-1.5 px-4 py-3 font-bold border-b-2 whitespace-nowrap transition ${
-              activeTab === 'terms' ? 'border-amber-500 text-amber-400 bg-slate-900/50' : 'border-transparent text-slate-400 hover:text-slate-200'
+              activeTab === 'terms' ? 'border-[#4ea259] text-emerald-400 bg-[#0f1b12]/50' : 'border-transparent text-slate-400 hover:text-slate-200'
             }`}
           >
             <FileCheck className="w-4 h-4" />
@@ -59,7 +59,7 @@ export const PoliciesModal: React.FC<PoliciesModalProps> = ({
           <button
             onClick={() => setActiveTab('privacy')}
             className={`flex items-center gap-1.5 px-4 py-3 font-bold border-b-2 whitespace-nowrap transition ${
-              activeTab === 'privacy' ? 'border-amber-500 text-amber-400 bg-slate-900/50' : 'border-transparent text-slate-400 hover:text-slate-200'
+              activeTab === 'privacy' ? 'border-[#4ea259] text-emerald-400 bg-[#0f1b12]/50' : 'border-transparent text-slate-400 hover:text-slate-200'
             }`}
           >
             <ShieldCheck className="w-4 h-4" />

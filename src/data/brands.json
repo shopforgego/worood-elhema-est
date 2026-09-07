@@ -1,0 +1,1022 @@
+[
+  {
+    "id": 1420952383,
+    "name": "Chevrolet",
+    "label": "Chevrolet",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/8HrBJIl523ugPMu3ILClvsqXi9UXemsVi31biQp3.png",
+    "status": true,
+    "ar_char": "ت",
+    "en_char": "C",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 1111580730,
+    "name": "Hyundai",
+    "label": "Hyundai",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/vfZVYL1FK4Y5UMdMxBPxh6YihatIEFrkq7MsgEWK.png",
+    "status": true,
+    "ar_char": "ه",
+    "en_char": "H",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 472878907,
+    "name": "Kia",
+    "label": "Kia",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/XHLzwiFrjQlMMjmCxHAJtli3QerDskfQRZ68GMGc.png",
+    "status": true,
+    "ar_char": "ك",
+    "en_char": "K",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 55396609,
+    "name": "Dodge",
+    "label": "Dodge",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/lwP3AX8IYRFt0kVYULJMRQt2UtfxMUuX4kEYxBYi.jpeg",
+    "status": true,
+    "ar_char": "د",
+    "en_char": "D",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 1563060226,
+    "name": "Ram",
+    "label": "Ram",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/2iDyfQ1SV3iGHGoPJtNlnJmexfBEPdrfdLXnTMKF.jpeg",
+    "status": true,
+    "ar_char": "ر",
+    "en_char": "R",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 787969795,
+    "name": "Mopar",
+    "label": "Mopar",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/gJiV7iD4Ywf4YtOtUMAdmDi1DnonrSqVBU9h861y.png",
+    "status": true,
+    "ar_char": "م",
+    "en_char": "M",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 2027787788,
+    "name": "Chrysler",
+    "label": "Chrysler",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/1h8E6EoIYYDXc5vYR1FcjHkNyPmmvSm3n1hDqmqW.jpeg",
+    "status": true,
+    "ar_char": "ت",
+    "en_char": "C",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 1253750029,
+    "name": "Ford",
+    "label": "Ford",
+    "description": "",
+    "banner": "https://cdn.salla.sa/rxyaX/E9z2njmCjVKmcc6UkuOEhEMci2cgyY6ZaTUVkH4L.jpg",
+    "logo": "https://cdn.salla.sa/rxyaX/tt5T2mn065C9eSac0yLVTycJuwGQgxe4sreVIZBU.jpg",
+    "status": true,
+    "ar_char": "ف",
+    "en_char": "F",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 612881422,
+    "name": "Cadillac",
+    "label": "Cadillac",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/7PsXlS4gJIuQHtCnwTRIoMX4arwXa9IJW1S1LZUg.jpeg",
+    "status": true,
+    "ar_char": "ك",
+    "en_char": "C",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 1078530568,
+    "name": "Jeep",
+    "label": "Jeep",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/nZ0VxsP6RDNpETketqRKhroffIq9GRAP51pGK2t9.png",
+    "status": true,
+    "ar_char": "ج",
+    "en_char": "J",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 227168771,
+    "name": "Lincoln",
+    "label": "Lincoln",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/u5hVCtdGRQpGj27VJlnpBH4BFjRTQG7evqo6S6YW.jpeg",
+    "status": true,
+    "ar_char": "ل",
+    "en_char": "L",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 909848222,
+    "name": "Akebono",
+    "label": "Akebono",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/btB1S4gKg3oOAjKRf88kL23ZTvPWgQlhwoTfCsOG.png",
+    "status": true,
+    "ar_char": "ا",
+    "en_char": "A",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 889856134,
+    "name": "Fiat",
+    "label": "Fiat",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/WQiasHhhxy7A8kdk8t4YxNQfncSeSB1VQ0NI5KK9.png",
+    "status": true,
+    "ar_char": "ف",
+    "en_char": "F",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 1494594443,
+    "name": "Opel",
+    "label": "Opel",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/llFAlpQnswjRTVRnTmgKx5Dy8dRwFs7yiCsk0O0P.png",
+    "status": true,
+    "ar_char": "ا",
+    "en_char": "O",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 1396157180,
+    "name": "BILSTEIN",
+    "label": "BILSTEIN",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/QMwyukHIMxrm6CjzoVdyaEaawlYFd2NjhEdUbfBf.jpg",
+    "status": true,
+    "ar_char": "ب",
+    "en_char": "B",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 1744287790,
+    "name": "RANCHO",
+    "label": "RANCHO",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/OppovRJH0x8kuOw4UpYunln8h83n4ZGqAk5NqOdT.png",
+    "status": true,
+    "ar_char": "ر",
+    "en_char": "R",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 1432739169,
+    "name": "Gabriel",
+    "label": "Gabriel",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/qQgRXEQlNLK0JZGDrn3Gz8AYxi6lNnNQJIF8UJ7v.png",
+    "status": true,
+    "ar_char": "غ",
+    "en_char": "G",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 658701410,
+    "name": "SACHS",
+    "label": "SACHS",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/xO0164bdNptuUfnIR32dNK4I0oSXsjODACIqowew.jpg",
+    "status": true,
+    "ar_char": "س",
+    "en_char": "S",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 382234455,
+    "name": "Monroe",
+    "label": "Monroe",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/mWvIMJu7zkS6iPEZifR7UqiY0LCkzLV6P23oXPgQ.jpg",
+    "status": true,
+    "ar_char": "م",
+    "en_char": "M",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 583427663,
+    "name": "Brembo",
+    "label": "Brembo",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/o8BNyXasAKUpFEXdOFFlTMOCCQdHadu1Sp0O0pLL.png",
+    "status": true,
+    "ar_char": "ب",
+    "en_char": "B",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 2091681096,
+    "name": "Power stop",
+    "label": "Power stop",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/LVyFVUobHHWDFIi6ORu71fwNfS7aZW3sGOVcPXgS.png",
+    "status": true,
+    "ar_char": "ب",
+    "en_char": "P",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 408339274,
+    "name": "Wagner",
+    "label": "Wagner",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/xP6rngW6pY6KJYGPqqwwC4FHIMNwRmutIVNrJguk.png",
+    "status": true,
+    "ar_char": "و",
+    "en_char": "W",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 1678364661,
+    "name": "GSP",
+    "label": "GSP",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/2TMOF4J726jy2un36F3WJXHH7iS5ziM5VfR2K6x2.png",
+    "status": true,
+    "ar_char": "غ",
+    "en_char": "G",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 836169462,
+    "name": "Cardone",
+    "label": "Cardone",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/nPxD02iBas8HrmxEh33fJ5S52BIiaLqq1PciXxMQ.png",
+    "status": true,
+    "ar_char": "ك",
+    "en_char": "C",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 1407187713,
+    "name": "Acdelco - GM",
+    "label": "Acdelco - GM",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/InlCzsVA3s9BkrlNZrwGe6oawXtrpJM7VNLztSUz.png",
+    "status": true,
+    "ar_char": "ا",
+    "en_char": "A",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 852283739,
+    "name": "TRW",
+    "label": "TRW",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/Uy9Af3tF6IpxWba3HJsAVEQ13wLelSDCueGoC3DM.png",
+    "status": true,
+    "ar_char": "ت",
+    "en_char": "T",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 95173344,
+    "name": "FILTRON",
+    "label": "FILTRON",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/pEMXgMVuLbVtJmPeDqOI8qiTSMAv3qgPWR8JK9XO.png",
+    "status": true,
+    "ar_char": "ف",
+    "en_char": "F",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 1348947030,
+    "name": "Hengst",
+    "label": "Hengst",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/A222sDUoUMDCjpGRfJjWj3kq8EFeZ42Zn5ZVm28S.jpg",
+    "status": true,
+    "ar_char": "ه",
+    "en_char": "H",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 1849586749,
+    "name": "Osram",
+    "label": "Osram",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/qq6DrMzpOeEE1mg3ZCWTMtdOhia4d1Bs5rlcxTEc.png",
+    "status": true,
+    "ar_char": "ا",
+    "en_char": "O",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 1367654234,
+    "name": "Philips",
+    "label": "Philips",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/vYayoF18wagH3R3Dbztm89ickGLz0aPs17JHeYwr.png",
+    "status": true,
+    "ar_char": "ف",
+    "en_char": "P",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 1302460209,
+    "name": "BOSCH",
+    "label": "BOSCH",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/F9F4qWkHd6xnhfBoD6mMgYuokQkXZoGjugLk1ImO.png",
+    "status": true,
+    "ar_char": "ب",
+    "en_char": "B",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 130797103,
+    "name": "Febest",
+    "label": "Febest",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/pflx6PXEGZsEl0SosNnqnd41s84AdhxRampdegyw.png",
+    "status": true,
+    "ar_char": "ف",
+    "en_char": "F",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 933357476,
+    "name": "ALCO",
+    "label": "ALCO",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/kw9rVDSZmF13tUbkDDwaSshZqeUhHOXqhNZXpAoW.jpg",
+    "status": true,
+    "ar_char": "ا",
+    "en_char": "A",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 1364449204,
+    "name": "Mahle",
+    "label": "Mahle",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/aAooj264qgBA2zqfmi4YCcIVGOhklSNC85h8B4aM.png",
+    "status": true,
+    "ar_char": "م",
+    "en_char": "M",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 590935733,
+    "name": "Cloyes",
+    "label": "Cloyes",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/hMr0ZRNENxxt7l2JzpXnlXn5n372lI7tog4BlgAp.png",
+    "status": true,
+    "ar_char": "ك",
+    "en_char": "C",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 1323447479,
+    "name": "Melling",
+    "label": "Melling",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/nVOEtm59lIPX9N86zwKqEECLXqq3QPrumKSIRIAd.png",
+    "status": true,
+    "ar_char": "م",
+    "en_char": "M",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 1596443854,
+    "name": "LUK",
+    "label": "LUK",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/G76qmbBsi8cC5FtMbnfTGEZgxfGUOWgSjH5w7mjm.jpg",
+    "status": true,
+    "ar_char": "ل",
+    "en_char": "L",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 688712655,
+    "name": "Anchor",
+    "label": "Anchor",
+    "description": "Since 1933, Anchor has been the most recognized name in engine and transmission mounts.",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/SkB4yPxqc4VP1mkJpJq44fhPEb0D4TK0ks9crbOz.png",
+    "status": true,
+    "ar_char": "ا",
+    "en_char": "A",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 1435729810,
+    "name": "KYB",
+    "label": "KYB",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/bBTXZg851gDiRPcuD54idQ73JZtXZNEBDe4tyyrV.jpg",
+    "status": true,
+    "ar_char": "ك",
+    "en_char": "K",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 1065824695,
+    "name": "Westar",
+    "label": "Westar",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/fHhRmmqz1cSPwuOgXUZUcvso14Ss02juUbkqq9QT.jpg",
+    "status": true,
+    "ar_char": "و",
+    "en_char": "W",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 87264460,
+    "name": "SHEE MAR",
+    "label": "SHEE MAR",
+    "description": "Since 1970 Shee-Mar has been known for its uncompromising standard of quality and service. Shee-Mar is committed to offering high quality products at competitive prices.",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/IBjckmG50a6Lc9fLCoYuzx42kQ6ShOPJ5XG3x95j.png",
+    "status": true,
+    "ar_char": "ش",
+    "en_char": "S",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 360121371,
+    "name": "Vemo",
+    "label": "Vemo",
+    "description": "VEMO is a division of Vierol - a German auto parts manufacturer. Vemo products are made using high-quality materials and undergo strict quality tests to ensure OE fit, form, and function.",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/u9QExxl8o2vyu0YRBgcnQSotoVSSMghbyjOOcQax.png",
+    "status": true,
+    "ar_char": "ف",
+    "en_char": "V",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 982030813,
+    "name": "Centric",
+    "label": "Centric",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/99lphk4YQlKaMCxQKnKL0hzO2j8VTA1goPcKSI08.jpg",
+    "status": true,
+    "ar_char": "س",
+    "en_char": "C",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 46230498,
+    "name": "DEPO",
+    "label": "DEPO",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/tN9UXuA7LJEbLziepyGPGgOMpU9LfsJaOWR2L1Cl.png",
+    "status": true,
+    "ar_char": "د",
+    "en_char": "D",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 2072938979,
+    "name": "GATES",
+    "label": "GATES",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/vwEo6Rcj6dexL6yn3DN9XReixh6pHg7EwS8lMa02.png",
+    "status": true,
+    "ar_char": "غ",
+    "en_char": "G",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 1466240421,
+    "name": "CSF",
+    "label": "CSF",
+    "description": "CSF, The Cooling Experts, have been serving the US aftermarket for almost 4 decades. With over 30 million units sold, CSF is your exclusive source for Radiators, Condensers, Intercoolers, Inverter Coolers, Racing Radiators and Pressure Caps. Whatever the application, trust CSF radiators to keep your vehicle running cool.",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/3PBisQ8bxy3H3YAqH4p0LBesIUyvIAgGDOGZqveI.png",
+    "status": true,
+    "ar_char": "ك",
+    "en_char": "C",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 766170509,
+    "name": "TYC",
+    "label": "TYC",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/85j2j2S5ZDeXuezpxI8PEvUaQ1VSct9sNHKgBoOy.jpg",
+    "status": true,
+    "ar_char": "ت",
+    "en_char": "T",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 817454644,
+    "name": "Denso",
+    "label": "Denso",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/AFuAFFPt1Ar1qtd0yVp1dr9JfpAFTpYkPK7Uaeps.png",
+    "status": true,
+    "ar_char": "د",
+    "en_char": "D",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 776583991,
+    "name": "Pure energy",
+    "label": "Pure energy",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/8FyDsPPPQhxXoDAN30jkdNwLT6DUpnT41epwpRlP.jpg",
+    "status": true,
+    "ar_char": "ب",
+    "en_char": "P",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 483607422,
+    "name": "MOOG",
+    "label": "MOOG",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/jae2W3NDXaSe1CvKfGtE9TpXNeSxU7L78v5DG9XG.png",
+    "status": true,
+    "ar_char": "م",
+    "en_char": "M",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 1857577599,
+    "name": "MEVOTECH",
+    "label": "MEVOTECH",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/UGxLYo1WsRpzeSGRVfV4ObkhMo8Mby8GGbSj50uN.png",
+    "status": true,
+    "ar_char": "م",
+    "en_char": "M",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 2038524487,
+    "name": "BGS",
+    "label": "BGS",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/617OPX5XKjeP5BjlVP2L49kSa2NWme1WMLYhgwb8.png",
+    "status": true,
+    "ar_char": "ب",
+    "en_char": "B",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 927168534,
+    "name": "Raybestos",
+    "label": "Raybestos",
+    "description": "",
+    "banner": "https://cdn.salla.sa/rxyaX/CyiIdgLGEHw4ALtkyPdsmBaHMOdGtFroJfiQZgZn.jpg",
+    "logo": "https://cdn.salla.sa/rxyaX/BtZ0jFRAw8Ve40hQSQZ2V4HFcOiqoCBEWiNm9Q7P.jpg",
+    "status": true,
+    "ar_char": "ر",
+    "en_char": "R",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 752076049,
+    "name": "Hayden",
+    "label": "Hayden",
+    "description": "",
+    "banner": null,
+    "logo": "https://images.salla.sa/rxyaX/DduTx2R9WBwLusQPpfdbB4wiG47rmFayzFwUe7dv.png",
+    "status": true,
+    "ar_char": "ه",
+    "en_char": "H",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 34048452,
+    "name": "Remy",
+    "label": "Remy",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/lx7GHwwoUCCHOY01d7jnFRdBCkmKAsoULqL6MKFk.jpg",
+    "status": true,
+    "ar_char": "ر",
+    "en_char": "R",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 331188635,
+    "name": "NGK",
+    "label": "NGK",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/oBRNuIhSoVUwG8lPWeDVC07gi10lqos5IAd0ZXcV.jpg",
+    "status": true,
+    "ar_char": "ن",
+    "en_char": "N",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 493928977,
+    "name": "BeckArnley",
+    "label": "BeckArnley",
+    "description": "Beck/Arnley was established in 1914 as Beck Distributing Corp. in New York City by Irving Beck.  Initially a supplier of motorcycle parts, when World War I broke out, Beck landed a contract to supply the US Army with sidecars made in Australia for dispatch riders who provided communications on the battlefield. After the war ended, Beck began to follow the rapidly growing motorcycle market and provided it with a catalog of repair parts and accessories.\r\n\r\nLater, after World War II, the company transitioned into providing parts and accessories for the burgeoning foreign nameplate market.  Throughout the years, Beck/Arnley continued to specialize in and understand foreign nameplate replacement parts.  All our parts meet OE specifications for form, fit and function.\r\n\r\nOur product specialists work with a network of global sourcing partners so you can install the right part with confidence. With 24,000 parts that cover 80 makes and nearly 1,800 models, if you’re looking for foreign nameplate vehicle parts - Check with Beck.",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/ERcZGVT6bqDiM3RogK9GG90g07WBLdg0Rb6UNRN1.png",
+    "status": true,
+    "ar_char": "ب",
+    "en_char": "B",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 960102419,
+    "name": "Marmon ride control",
+    "label": "Marmon ride control",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/NCQdkl8l2oquEzLBWvhgvds0MxtsUGdaU5Tu56yB.png",
+    "status": true,
+    "ar_char": "م",
+    "en_char": "M",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 674134088,
+    "name": "Energy suspension",
+    "label": "Energy suspension",
+    "description": "",
+    "banner": null,
+    "logo": "https://cdn.salla.sa/rxyaX/xNygy8oNJZPBfZUfJOszwd07JqAdKZZTz8V76qNo.jpg",
+    "status": true,
+    "ar_char": "ا",
+    "en_char": "E",
+    "channels": [],
+    "metadata": {
+      "title": null,
+      "description": null,
+      "url": null
+    }
+  },
+  {
+    "id": 1745413386,
+    "name": "Textar Brake pads",
+    "label": "Textar Brake pads",
+    "description": "Textar has been a synonym for premium friction products for 100 years. Founded in 1913 as a sales company, the brand of the TMD Friction Group stands for high quality, optimum safety and highest braking comfort worldwide.\r\n\r\nHistory has shown that Textar pads and linings have not only conquered the road, they have also been successful in motor racing. In the legendary Mercedes Silver Arrow, they helped Argentine driver Juan Manuel Fangio achieve victories in the 1950s, including Grand Prix wins on the Nürburgring, in Italy and in Buenos Aires. A thank-you letter from Mercedes tells of the successful collaboration.\r\n\r\nIn the high performance sector, TMD Friction’s Textar pads are the first choice for vehicles fitted with carbon ceramic brake discs. And with good reason, since these pads have been developed in close collaboration with the disc manufacturer to find the perfect match for this friction partner.\r\n\r\nToday, Textar offers the widest range of products and services for passenger cars currently built in the market. In the commercial vehicles sector, 70% of vehicles with drum brakes, and 50% of those with disc brakes, leave the assembly line fitted with Textar friction products.\r\n\r\nThe trend in vehicle engineering and the development of Textar friction products is currently towards increasing both drive comfort and environmental compatibility. Products that cause less brake dust and low noise, that are lighter and therefore reduce consumption, are no dreams of the future for Textar. They are already successful in the spare parts market through the TEXTAR EPAD, and in the commercial vehicles sector through the TEXTAR LIGHT-WEIGHT BACKING PLATES.",
+    "banner": "https://cdn.salla.sa/rxyaX/yiHXcFXXahM2yy1z3rPksS1wZKpQBDPEqnsCEkMV.jpg",
+    "logo": "https://cdn.salla.sa/rxyaX/edqozRtugtLOCKc37cpHdCfplLrVG2L470fOgmJY.jpg",
+    "status": true,
+    "ar_char": "ت",
+    "en_char": "T",
+    "channels": [],
+    "metadata": {
+      "title": "",
+      "description": "",
+      "url": ""
+    }
+  }
+]

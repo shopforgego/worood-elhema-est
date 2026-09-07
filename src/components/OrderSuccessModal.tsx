@@ -18,8 +18,8 @@ export const OrderSuccessModal: React.FC<OrderSuccessModalProps> = ({
   );
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4">
-      <div className="bg-slate-900 border border-slate-800 rounded-3xl max-w-lg w-full p-6 sm:p-8 text-center shadow-2xl animate-in zoom-in-95 duration-200">
+    <div className="fixed inset-0 z-50 overflow-y-auto bg-[#0a120c]/90 backdrop-blur-md flex items-center justify-center p-4">
+      <div className="bg-[#0f1b12] border border-[#3d7a46]/30 rounded-3xl max-w-lg w-full p-6 sm:p-8 text-center shadow-2xl animate-in zoom-in-95 duration-200">
         <div className="w-16 h-16 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4 border border-emerald-500/30">
           <CheckCircle2 className="w-10 h-10" />
         </div>
@@ -27,10 +27,10 @@ export const OrderSuccessModal: React.FC<OrderSuccessModalProps> = ({
         <h3 className="text-xl sm:text-2xl font-black text-white mb-1">تم تأكيد طلبك بنجاح!</h3>
         <p className="text-xs text-slate-400 mb-4">شكراً لتسوقك من {storeConfig.storeNameAr}</p>
 
-        <div className="bg-slate-950 border border-slate-800 rounded-2xl p-4 text-right mb-5 space-y-2 text-xs">
-          <div className="flex justify-between border-b border-slate-800 pb-2">
+        <div className="bg-[#0a120c] border border-[#3d7a46]/30 rounded-2xl p-4 text-right mb-5 space-y-2 text-xs">
+          <div className="flex justify-between border-b border-[#3d7a46]/30 pb-2">
             <span className="text-slate-400">رقم الفاتورة والطلب:</span>
-            <span className="font-mono font-black text-amber-400">{orderData.orderNumber}</span>
+            <span className="font-mono font-black text-emerald-400">{orderData.orderNumber}</span>
           </div>
           <div className="flex justify-between">
             <span className="text-slate-400">المستلم:</span>
@@ -40,9 +40,9 @@ export const OrderSuccessModal: React.FC<OrderSuccessModalProps> = ({
             <span className="text-slate-400">مدينة التوصيل:</span>
             <span className="text-white font-bold">{orderData.customer.city} - {orderData.customer.district}</span>
           </div>
-          <div className="flex justify-between border-t border-slate-800 pt-2 font-black text-sm">
+          <div className="flex justify-between border-t border-[#3d7a46]/30 pt-2 font-black text-sm">
             <span className="text-white">الإجمالي المدفوع:</span>
-            <span className="text-amber-400">{orderData.total.toFixed(2)} {storeConfig.currencySymbol}</span>
+            <span className="text-emerald-400">{orderData.total.toFixed(2)} {storeConfig.currencySymbol}</span>
           </div>
         </div>
 

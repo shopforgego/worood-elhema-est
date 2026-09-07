@@ -43,12 +43,12 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 overflow-hidden bg-slate-950/80 backdrop-blur-sm flex justify-start">
-      <div className="w-full max-w-md bg-slate-900 border-l border-slate-800 h-full flex flex-col shadow-2xl animate-in slide-in-from-left duration-300">
+    <div className="fixed inset-0 z-50 overflow-hidden bg-[#0a120c]/80 backdrop-blur-sm flex justify-start">
+      <div className="w-full max-w-md bg-[#0f1b12] border-l border-[#3d7a46]/30 h-full flex flex-col shadow-2xl animate-in slide-in-from-left duration-300">
         {/* Header */}
-        <div className="p-4 sm:p-5 border-b border-slate-800 flex items-center justify-between bg-slate-950/60">
+        <div className="p-4 sm:p-5 border-b border-[#3d7a46]/30 flex items-center justify-between bg-[#0a120c]/60">
           <div className="flex items-center gap-2">
-            <ShoppingBag className="w-5 h-5 text-amber-400" />
+            <ShoppingBag className="w-5 h-5 text-emerald-400" />
             <h3 className="font-extrabold text-base text-white">سلة المشتريات ({items.length})</h3>
           </div>
           <button
@@ -60,7 +60,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
         </div>
 
         {/* Free Shipping Progress */}
-        <div className="bg-slate-950 p-3 border-b border-slate-800 text-xs">
+        <div className="bg-[#0a120c] p-3 border-b border-[#3d7a46]/30 text-xs">
           {isFreeShipping ? (
             <div className="text-emerald-400 font-bold flex items-center gap-1.5 justify-center">
               <Truck className="w-4 h-4" />
@@ -69,7 +69,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
           ) : (
             <div>
               <div className="flex justify-between text-slate-300 mb-1 font-medium">
-                <span>أضف بـ <strong className="text-amber-400">{(storeConfig.freeShippingThreshold - subtotal).toFixed(2)} {storeConfig.currencySymbol}</strong> للشحن المجاني</span>
+                <span>أضف بـ <strong className="text-emerald-400">{(storeConfig.freeShippingThreshold - subtotal).toFixed(2)} {storeConfig.currencySymbol}</strong> للشحن المجاني</span>
                 <span>{Math.round((subtotal / storeConfig.freeShippingThreshold) * 100)}%</span>
               </div>
               <div className="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
@@ -91,7 +91,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
               <p className="text-xs text-slate-500 mb-4">تصفح الكتالوج وأضف قطع الغيار التي تحتاجها لسيارتك</p>
               <button
                 onClick={onClose}
-                className="bg-slate-800 hover:bg-slate-700 text-amber-400 font-bold text-xs px-4 py-2.5 rounded-xl border border-slate-700 transition"
+                className="bg-slate-800 hover:bg-slate-700 text-emerald-400 font-bold text-xs px-4 py-2.5 rounded-xl border border-slate-700 transition"
               >
                 تصفح المنتجات
               </button>
@@ -100,27 +100,27 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
             items.map((item) => (
               <div
                 key={item.product.id}
-                className="bg-slate-950 border border-slate-800/80 p-3 rounded-2xl flex gap-3 items-center"
+                className="bg-[#0a120c] border border-[#3d7a46]/30/80 p-3 rounded-2xl flex gap-3 items-center"
               >
                 <img
                   src={item.product.main_image || item.product.image}
                   alt={item.product.title}
-                  className="w-16 h-16 object-cover rounded-xl border border-slate-800 flex-shrink-0"
+                  className="w-16 h-16 object-cover rounded-xl border border-[#3d7a46]/30 flex-shrink-0"
                 />
                 <div className="flex-1 min-w-0">
                   <h4 className="font-bold text-xs text-white truncate mb-1">{item.product.title}</h4>
-                  <div className="text-xs font-black text-amber-400">
+                  <div className="text-xs font-black text-emerald-400">
                     {item.product.price.toFixed(2)} {storeConfig.currencySymbol}
                   </div>
                   <div className="flex items-center gap-2 mt-2">
-                    <div className="flex items-center bg-slate-900 border border-slate-700 rounded-lg text-xs">
+                    <div className="flex items-center bg-[#0f1b12] border border-slate-700 rounded-lg text-xs">
                       <button
                         onClick={() => onUpdateQuantity(item.product.id, item.quantity - 1)}
                         className="px-2 py-0.5 text-slate-300 hover:text-white"
                       >
                         -
                       </button>
-                      <span className="px-2 py-0.5 font-bold text-amber-400">{item.quantity}</span>
+                      <span className="px-2 py-0.5 font-bold text-emerald-400">{item.quantity}</span>
                       <button
                         onClick={() => onUpdateQuantity(item.product.id, item.quantity + 1)}
                         className="px-2 py-0.5 text-slate-300 hover:text-white"
@@ -144,7 +144,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
 
         {/* Footer Summary */}
         {items.length > 0 && (
-          <div className="p-4 border-t border-slate-800 bg-slate-950 space-y-3">
+          <div className="p-4 border-t border-[#3d7a46]/30 bg-[#0a120c] space-y-3">
             {/* Coupon */}
             <form onSubmit={handleApplyCoupon} className="flex gap-2">
               <input
@@ -153,18 +153,18 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 onChange={(e) => setCoupon(e.target.value)}
                 placeholder="كود الخصم (WAROOD10)"
                 disabled={couponApplied}
-                className="flex-1 bg-slate-900 border border-slate-800 rounded-xl px-3 py-1.5 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-amber-500"
+                className="flex-1 bg-[#0f1b12] border border-[#3d7a46]/30 rounded-xl px-3 py-1.5 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-amber-500"
               />
               <button
                 type="submit"
                 disabled={couponApplied}
-                className="bg-slate-800 hover:bg-slate-700 text-amber-400 font-bold text-xs px-3 py-1.5 rounded-xl border border-slate-700 transition"
+                className="bg-slate-800 hover:bg-slate-700 text-emerald-400 font-bold text-xs px-3 py-1.5 rounded-xl border border-slate-700 transition"
               >
                 {couponApplied ? 'مطبق ✓' : 'تطبيق'}
               </button>
             </form>
 
-            <div className="space-y-1.5 text-xs text-slate-400 pt-2 border-t border-slate-800/80">
+            <div className="space-y-1.5 text-xs text-slate-400 pt-2 border-t border-[#3d7a46]/30/80">
               <div className="flex justify-between">
                 <span>المجموع الفرعي:</span>
                 <span className="text-slate-200 font-bold">{subtotal.toFixed(2)} {storeConfig.currencySymbol}</span>
@@ -181,9 +181,9 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                   {shipping === 0 ? "مجاني" : `${shipping.toFixed(2)} ${storeConfig.currencySymbol}`}
                 </span>
               </div>
-              <div className="flex justify-between text-sm font-black text-white pt-2 border-t border-slate-800">
+              <div className="flex justify-between text-sm font-black text-white pt-2 border-t border-[#3d7a46]/30">
                 <span>الإجمالي النهائي:</span>
-                <span className="text-amber-400 text-base">{total.toFixed(2)} {storeConfig.currencySymbol}</span>
+                <span className="text-emerald-400 text-base">{total.toFixed(2)} {storeConfig.currencySymbol}</span>
               </div>
             </div>
 
@@ -192,7 +192,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 onClose();
                 onProceedToCheckout();
               }}
-              className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-black py-3 rounded-xl shadow-lg shadow-amber-500/20 transition transform active:scale-95 text-sm"
+              className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-[#3d7a46] to-[#2e5c35] hover:from-[#478f52] hover:to-[#386e40] text-white font-black py-3 rounded-xl shadow-lg shadow-[#3d7a46]/30 transition transform active:scale-95 text-sm"
             >
               <span>متابعة إتمام الطلب والدفع</span>
               <ArrowLeft className="w-4 h-4" />

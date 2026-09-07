@@ -6,21 +6,30 @@ export interface Product {
   description: string;
   price: number;
   regular_price?: number;
+  originalPrice?: number;
   sale_price?: number;
-  currency: string;
-  currency_symbol: string;
+  currency?: string;
+  currency_symbol?: string;
   category: string;
   categories?: string[];
   brand?: string;
   vendor?: string;
   sku?: string;
   barcode?: string;
-  in_stock: boolean;
+  in_stock?: boolean;
+  inStock?: boolean;
   quantity?: number;
-  images: string[];
-  main_image: string;
+  images?: string[];
+  main_image?: string;
   image?: string;
   tags?: string[];
+  rating?: number;
+  reviewsCount?: number;
+  isFeatured?: boolean;
+  isNew?: boolean;
+  isBestSeller?: boolean;
+  features?: string[];
+  compatibility?: string;
 }
 
 export interface CartItem {
