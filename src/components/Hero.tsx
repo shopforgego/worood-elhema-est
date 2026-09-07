@@ -96,7 +96,7 @@ export const Hero: React.FC<HeroProps> = ({
           <div className="lg:col-span-5">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-[#3d7a46]/50 group bg-[#132216]">
               <img
-                src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?q=80&w=1200&auto=format&fit=crop"
+                src="/images/hero-banner.jpg"
                 alt={storeConfig.storeNameAr}
                 className="w-full h-72 sm:h-80 object-cover transform group-hover:scale-105 transition-transform duration-700 opacity-90"
               />
