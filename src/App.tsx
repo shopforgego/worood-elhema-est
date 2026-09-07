@@ -115,54 +115,54 @@ export function App() {
   const totalCartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
   const totalCartAmount = cart.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
 
-  // Car models for each manufacturer matching screenshots
+  // Local verified images for circular model badges
   const gmcModels: CircularModel[] = [
-    { name: 'سوبربان', image: 'https://cdn.salla.sa/rxyaX/8baac58d-09d8-480b-a854-2a8213c8d7db-432.55620316403x500-ef6gfowGUEbjqCHodXYlhORL1ww1kLHuFf17f1FW.jpg' },
-    { name: 'سييرا', image: 'https://cdn.salla.sa/rxyaX/d9a97445-060b-4d44-8f34-7dc8cdb8a2fa-500x500-vLc9y1JPqUG33RBswajqMftqKvV3ehGG0U7pzTcn.jpg' },
-    { name: 'كلاسيك قديم', image: 'https://cdn.salla.sa/rxyaX/3f82cb55-e4d0-4d51-a968-3d1912ec5859-500x333.33333333333-wE5XW1w9XvCjB8N1500ZtK.jpg' },
-    { name: 'سلفرادو', image: 'https://cdn.salla.sa/rxyaX/03f69ce6-9ae3-4204-a8f7-be5b5b31aa10-500x333.33333333333-tn5Xqx7JP8fjBE1q5OS1XfEfgytyIfMcWhhyORE8.png' },
-    { name: 'امبالا', image: 'https://cdn.salla.sa/rxyaX/8baac58d-09d8-480b-a854-2a8213c8d7db-432.55620316403x500-ef6gfowGUEbjqCHodXYlhORL1ww1kLHuFf17f1FW.jpg' },
-    { name: 'كمارو', image: 'https://cdn.salla.sa/rxyaX/d9a97445-060b-4d44-8f34-7dc8cdb8a2fa-500x500-vLc9y1JPqUG33RBswajqMftqKvV3ehGG0U7pzTcn.jpg' },
+    { name: 'سوبربان', image: '/images/gmc_suburban.jpg' },
+    { name: 'سييرا', image: '/images/gmc_sierra.jpg' },
+    { name: 'كلاسيك قديم', image: '/images/gmc_classic.jpg' },
+    { name: 'سلفرادو', image: '/images/gmc_silverado.jpg' },
+    { name: 'امبالا', image: '/images/gmc_impala.jpg' },
+    { name: 'كمارو', image: '/images/gmc_camaro.jpg' },
   ];
 
   const cadillacModels: CircularModel[] = [
-    { name: 'كاديلاك CTS', image: 'https://cdn.salla.sa/rxyaX/d9a97445-060b-4d44-8f34-7dc8cdb8a2fa-500x500-vLc9y1JPqUG33RBswajqMftqKvV3ehGG0U7pzTcn.jpg' },
-    { name: 'SEVILLE', image: 'https://cdn.salla.sa/rxyaX/8baac58d-09d8-480b-a854-2a8213c8d7db-432.55620316403x500-ef6gfowGUEbjqCHodXYlhORL1ww1kLHuFf17f1FW.jpg' },
-    { name: '60 SPECIAL', image: 'https://cdn.salla.sa/rxyaX/03f69ce6-9ae3-4204-a8f7-be5b5b31aa10-500x333.33333333333-tn5Xqx7JP8fjBE1q5OS1XfEfgytyIfMcWhhyORE8.png' },
-    { name: 'كاديلاك XLR', image: 'https://cdn.salla.sa/rxyaX/3f82cb55-e4d0-4d51-a968-3d1912ec5859-500x333.33333333333-wE5XW1w9XvCjB8N1500ZtK.jpg' },
-    { name: 'كاديلاك DTS', image: 'https://cdn.salla.sa/rxyaX/d9a97445-060b-4d44-8f34-7dc8cdb8a2fa-500x500-vLc9y1JPqUG33RBswajqMftqKvV3ehGG0U7pzTcn.jpg' },
-    { name: 'كاديلاك ديفيل', image: 'https://cdn.salla.sa/rxyaX/8baac58d-09d8-480b-a854-2a8213c8d7db-432.55620316403x500-ef6gfowGUEbjqCHodXYlhORL1ww1kLHuFf17f1FW.jpg' },
+    { name: 'كاديلاك CTS', image: '/images/cadillac_cts.jpg' },
+    { name: 'SEVILLE', image: '/images/cadillac_seville.jpg' },
+    { name: '60 SPECIAL', image: '/images/cadillac_60.jpg' },
+    { name: 'كاديلاك XLR', image: '/images/cadillac_xlr.jpg' },
+    { name: 'كاديلاك DTS', image: '/images/cadillac_dts.jpg' },
+    { name: 'كاديلاك ديفيل', image: '/images/cadillac_deville.jpg' },
   ];
 
   const hyundaiModels: CircularModel[] = [
-    { name: 'ماكس كروز', image: 'https://cdn.salla.sa/rxyaX/03f69ce6-9ae3-4204-a8f7-be5b5b31aa10-500x333.33333333333-tn5Xqx7JP8fjBE1q5OS1XfEfgytyIfMcWhhyORE8.png' },
-    { name: 'كونا بنزين وديزل', image: 'https://cdn.salla.sa/rxyaX/d9a97445-060b-4d44-8f34-7dc8cdb8a2fa-500x500-vLc9y1JPqUG33RBswajqMftqKvV3ehGG0U7pzTcn.jpg' },
-    { name: 'سنتينيال', image: 'https://cdn.salla.sa/rxyaX/8baac58d-09d8-480b-a854-2a8213c8d7db-432.55620316403x500-ef6gfowGUEbjqCHodXYlhORL1ww1kLHuFf17f1FW.jpg' },
-    { name: 'اكسنت بنزين', image: 'https://cdn.salla.sa/rxyaX/3f82cb55-e4d0-4d51-a968-3d1912ec5859-500x333.33333333333-wE5XW1w9XvCjB8N1500ZtK.jpg' },
-    { name: 'كريتا', image: 'https://cdn.salla.sa/rxyaX/03f69ce6-9ae3-4204-a8f7-be5b5b31aa10-500x333.33333333333-tn5Xqx7JP8fjBE1q5OS1XfEfgytyIfMcWhhyORE8.png' },
-    { name: 'اكسنت ديزل', image: 'https://cdn.salla.sa/rxyaX/d9a97445-060b-4d44-8f34-7dc8cdb8a2fa-500x500-vLc9y1JPqUG33RBswajqMftqKvV3ehGG0U7pzTcn.jpg' },
-    { name: 'جينسس Genesis', image: 'https://cdn.salla.sa/rxyaX/8baac58d-09d8-480b-a854-2a8213c8d7db-432.55620316403x500-ef6gfowGUEbjqCHodXYlhORL1ww1kLHuFf17f1FW.jpg' },
-    { name: 'فيراكروز', image: 'https://cdn.salla.sa/rxyaX/3f82cb55-e4d0-4d51-a968-3d1912ec5859-500x333.33333333333-wE5XW1w9XvCjB8N1500ZtK.jpg' },
+    { name: 'ماكس كروز', image: '/images/hyundai_maxcruz.jpg' },
+    { name: 'كونا بنزين وديزل', image: '/images/hyundai_kona.jpg' },
+    { name: 'سنتينيال', image: '/images/hyundai_centennial.jpg' },
+    { name: 'اكسنت بنزين', image: '/images/hyundai_accent_gas.jpg' },
+    { name: 'كريتا', image: '/images/hyundai_creta.jpg' },
+    { name: 'اكسنت ديزل', image: '/images/hyundai_accent_diesel.jpg' },
+    { name: 'جينسس Genesis', image: '/images/hyundai_genesis.jpg' },
+    { name: 'فيراكروز', image: '/images/hyundai_veracruz.jpg' },
   ];
 
   const kiaModels: CircularModel[] = [
-    { name: 'بونغو BONGO', image: 'https://cdn.salla.sa/rxyaX/03f69ce6-9ae3-4204-a8f7-be5b5b31aa10-500x333.33333333333-tn5Xqx7JP8fjBE1q5OS1XfEfgytyIfMcWhhyORE8.png' },
-    { name: 'كارينز', image: 'https://cdn.salla.sa/rxyaX/d9a97445-060b-4d44-8f34-7dc8cdb8a2fa-500x500-vLc9y1JPqUG33RBswajqMftqKvV3ehGG0U7pzTcn.jpg' },
-    { name: 'باص Pregio', image: 'https://cdn.salla.sa/rxyaX/8baac58d-09d8-480b-a854-2a8213c8d7db-432.55620316403x500-ef6gfowGUEbjqCHodXYlhORL1ww1kLHuFf17f1FW.jpg' },
-    { name: 'K2500 ديزل', image: 'https://cdn.salla.sa/rxyaX/3f82cb55-e4d0-4d51-a968-3d1912ec5859-500x333.33333333333-wE5XW1w9XvCjB8N1500ZtK.jpg' },
-    { name: 'كارنفال', image: 'https://cdn.salla.sa/rxyaX/03f69ce6-9ae3-4204-a8f7-be5b5b31aa10-500x333.33333333333-tn5Xqx7JP8fjBE1q5OS1XfEfgytyIfMcWhhyORE8.png' },
-    { name: 'بيكانتو', image: 'https://cdn.salla.sa/rxyaX/d9a97445-060b-4d44-8f34-7dc8cdb8a2fa-500x500-vLc9y1JPqUG33RBswajqMftqKvV3ehGG0U7pzTcn.jpg' },
-    { name: 'ريو', image: 'https://cdn.salla.sa/rxyaX/8baac58d-09d8-480b-a854-2a8213c8d7db-432.55620316403x500-ef6gfowGUEbjqCHodXYlhORL1ww1kLHuFf17f1FW.jpg' },
-    { name: 'كوريس K9', image: 'https://cdn.salla.sa/rxyaX/3f82cb55-e4d0-4d51-a968-3d1912ec5859-500x333.33333333333-wE5XW1w9XvCjB8N1500ZtK.jpg' },
+    { name: 'بونغو BONGO', image: '/images/kia_bongo.jpg' },
+    { name: 'كارينز', image: '/images/kia_carens.jpg' },
+    { name: 'باص Pregio', image: '/images/kia_pregio.jpg' },
+    { name: 'K2500 ديزل', image: '/images/kia_k2500.jpg' },
+    { name: 'كارنفال', image: '/images/kia_carnival.jpg' },
+    { name: 'بيكانتو', image: '/images/kia_picanto.jpg' },
+    { name: 'ريو', image: '/images/kia_rio.jpg' },
+    { name: 'كوريس K9', image: '/images/kia_quoris.jpg' },
   ];
 
   const dodgeModels: CircularModel[] = [
-    { name: 'جراند شيروكي', image: 'https://cdn.salla.sa/rxyaX/8baac58d-09d8-480b-a854-2a8213c8d7db-432.55620316403x500-ef6gfowGUEbjqCHodXYlhORL1ww1kLHuFf17f1FW.jpg' },
-    { name: 'دورانقو', image: 'https://cdn.salla.sa/rxyaX/d9a97445-060b-4d44-8f34-7dc8cdb8a2fa-500x500-vLc9y1JPqUG33RBswajqMftqKvV3ehGG0U7pzTcn.jpg' },
-    { name: 'تشارجر', image: 'https://cdn.salla.sa/rxyaX/03f69ce6-9ae3-4204-a8f7-be5b5b31aa10-500x333.33333333333-tn5Xqx7JP8fjBE1q5OS1XfEfgytyIfMcWhhyORE8.png' },
-    { name: 'تشالنجر', image: 'https://cdn.salla.sa/rxyaX/3f82cb55-e4d0-4d51-a968-3d1912ec5859-500x333.33333333333-wE5XW1w9XvCjB8N1500ZtK.jpg' },
-    { name: 'رام RAM', image: 'https://cdn.salla.sa/rxyaX/8baac58d-09d8-480b-a854-2a8213c8d7db-432.55620316403x500-ef6gfowGUEbjqCHodXYlhORL1ww1kLHuFf17f1FW.jpg' },
-    { name: 'كرايسلر 300C', image: 'https://cdn.salla.sa/rxyaX/d9a97445-060b-4d44-8f34-7dc8cdb8a2fa-500x500-vLc9y1JPqUG33RBswajqMftqKvV3ehGG0U7pzTcn.jpg' },
+    { name: 'جراند شيروكي', image: '/images/dodge_cherokee.jpg' },
+    { name: 'دورانقو', image: '/images/dodge_durango.jpg' },
+    { name: 'تشارجر', image: '/images/dodge_charger.jpg' },
+    { name: 'تشالنجر', image: '/images/dodge_challenger.jpg' },
+    { name: 'رام RAM', image: '/images/dodge_ram.jpg' },
+    { name: 'كرايسلر 300C', image: '/images/dodge_chrysler.jpg' },
   ];
 
   // Helper to get products for each section
@@ -221,7 +221,7 @@ export function App() {
                   key={product.id}
                   product={product}
                   onSelect={setSelectedProduct}
-                  onAddToCart={(p) => handleAddToCart(p, 1)}
+                  onAddToCart={(p: Product) => handleAddToCart(p, 1)}
                 />
               ))}
             </div>
@@ -241,12 +241,12 @@ export function App() {
           <CarSection
             title="جمس - شفرولية - بيوك"
             bannerTitle="جمس - شفرولية - بيوك"
-            bannerImage="https://cdn.salla.sa/rxyaX/8baac58d-09d8-480b-a854-2a8213c8d7db-432.55620316403x500-ef6gfowGUEbjqCHodXYlhORL1ww1kLHuFf17f1FW.jpg"
+            bannerImage="/images/banners/banner_gmc.jpg"
             bannerBgGradient="from-[#e2e8f0] via-[#cbd5e1] to-[#e2e8f0]"
             models={gmcModels}
             products={getProductsFor(['جمس', 'شفرولية', 'بيوك', 'سوبربان', 'سييرا', 'سلفرادو', 'امبالا', 'كمارو'])}
             onSelectProduct={setSelectedProduct}
-            onAddToCart={(p) => handleAddToCart(p, 1)}
+            onAddToCart={(p: Product) => handleAddToCart(p, 1)}
             onSelectModel={(m) => setSearchQuery(m)}
           />
 
@@ -254,12 +254,12 @@ export function App() {
           <CarSection
             title="كاديلاك"
             bannerTitle="كاديلاك"
-            bannerImage="https://cdn.salla.sa/rxyaX/d9a97445-060b-4d44-8f34-7dc8cdb8a2fa-500x500-vLc9y1JPqUG33RBswajqMftqKvV3ehGG0U7pzTcn.jpg"
+            bannerImage="/images/banners/banner_cadillac.jpg"
             bannerBgGradient="from-[#dcfce7] via-[#bbf7d0] to-[#dcfce7]"
             models={cadillacModels}
             products={getProductsFor(['كاديلاك', 'cts', 'dts', 'xlr', 'seville', 'اسكاليد'])}
             onSelectProduct={setSelectedProduct}
-            onAddToCart={(p) => handleAddToCart(p, 1)}
+            onAddToCart={(p: Product) => handleAddToCart(p, 1)}
             onSelectModel={(m) => setSearchQuery(m)}
           />
 
@@ -267,12 +267,12 @@ export function App() {
           <CarSection
             title="هونداي"
             bannerTitle="هونداي - قطع غيار أصلية"
-            bannerImage="https://cdn.salla.sa/rxyaX/03f69ce6-9ae3-4204-a8f7-be5b5b31aa10-500x333.33333333333-tn5Xqx7JP8fjBE1q5OS1XfEfgytyIfMcWhhyORE8.png"
+            bannerImage="/images/banners/banner_hyundai.jpg"
             bannerBgGradient="from-[#e0f2fe] via-[#bae6fd] to-[#e0f2fe]"
             models={hyundaiModels}
             products={getProductsFor(['هونداي', 'سوناتا', 'النترا', 'اكسنت', 'ازيرا', 'توسان', 'سنتافي', 'جينسس', 'كريتا', 'كونا'])}
             onSelectProduct={setSelectedProduct}
-            onAddToCart={(p) => handleAddToCart(p, 1)}
+            onAddToCart={(p: Product) => handleAddToCart(p, 1)}
             onSelectModel={(m) => setSearchQuery(m)}
           />
 
@@ -280,12 +280,12 @@ export function App() {
           <CarSection
             title="كيا"
             bannerTitle="كيا - قطع غيار واكسسوارات"
-            bannerImage="https://cdn.salla.sa/rxyaX/3f82cb55-e4d0-4d51-a968-3d1912ec5859-500x333.33333333333-wE5XW1w9XvCjB8N1500ZtK.jpg"
+            bannerImage="/images/banners/banner_kia.jpg"
             bannerBgGradient="from-[#fee2e2] via-[#fecaca] to-[#fee2e2]"
             models={kiaModels}
             products={getProductsFor(['كيا', 'كارينز', 'كارنفال', 'ريو', 'بيكانتو', 'سول', 'كوريس', 'k5'])}
             onSelectProduct={setSelectedProduct}
-            onAddToCart={(p) => handleAddToCart(p, 1)}
+            onAddToCart={(p: Product) => handleAddToCart(p, 1)}
             onSelectModel={(m) => setSearchQuery(m)}
           />
 
@@ -293,12 +293,12 @@ export function App() {
           <CarSection
             title="دوج - جيب - كرايسلر - رام"
             bannerTitle="دوج - جيب - كرايسلر - رام"
-            bannerImage="https://cdn.salla.sa/rxyaX/8baac58d-09d8-480b-a854-2a8213c8d7db-432.55620316403x500-ef6gfowGUEbjqCHodXYlhORL1ww1kLHuFf17f1FW.jpg"
+            bannerImage="/images/banners/banner_dodge.jpg"
             bannerBgGradient="from-[#f1f5f9] via-[#e2e8f0] to-[#f1f5f9]"
             models={dodgeModels}
             products={getProductsFor(['دوج', 'جيب', 'كرايسلر', 'رام', 'دورانقو', 'شروكي', 'تشارجر', 'تشالنجر'])}
             onSelectProduct={setSelectedProduct}
-            onAddToCart={(p) => handleAddToCart(p, 1)}
+            onAddToCart={(p: Product) => handleAddToCart(p, 1)}
             onSelectModel={(m) => setSearchQuery(m)}
           />
 
@@ -306,24 +306,24 @@ export function App() {
           <CarSection
             title="TOYOTA - LEXUS"
             bannerTitle="تويوتا - لكزس"
-            bannerImage="https://cdn.salla.sa/rxyaX/03f69ce6-9ae3-4204-a8f7-be5b5b31aa10-500x333.33333333333-tn5Xqx7JP8fjBE1q5OS1XfEfgytyIfMcWhhyORE8.png"
+            bannerImage="/images/banners/banner_toyota.jpg"
             bannerBgGradient="from-[#fef3c7] via-[#fde68a] to-[#fef3c7]"
             models={[]}
             products={getProductsFor(['تويوتا', 'لكزس', 'لاندكروزر', 'كامري', 'سيكويا', 'تندرا'])}
             onSelectProduct={setSelectedProduct}
-            onAddToCart={(p) => handleAddToCart(p, 1)}
+            onAddToCart={(p: Product) => handleAddToCart(p, 1)}
             onSelectModel={(m) => setSearchQuery(m)}
           />
 
           <CarSection
             title="فورد - لينكولن"
             bannerTitle="فورد - لينكولن"
-            bannerImage="https://cdn.salla.sa/rxyaX/d9a97445-060b-4d44-8f34-7dc8cdb8a2fa-500x500-vLc9y1JPqUG33RBswajqMftqKvV3ehGG0U7pzTcn.jpg"
+            bannerImage="/images/banners/banner_ford.jpg"
             bannerBgGradient="from-[#e0e7ff] via-[#c7d2fe] to-[#e0e7ff]"
             models={[]}
             products={getProductsFor(['فورد', 'لينكولن', 'فكتوريا', 'ماركيز', 'تورس', 'اكسبلورر', 'نافيجيتور'])}
             onSelectProduct={setSelectedProduct}
-            onAddToCart={(p) => handleAddToCart(p, 1)}
+            onAddToCart={(p: Product) => handleAddToCart(p, 1)}
             onSelectModel={(m) => setSearchQuery(m)}
           />
         </main>

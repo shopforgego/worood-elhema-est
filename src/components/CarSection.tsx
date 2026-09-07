@@ -32,6 +32,8 @@ export const CarSection: React.FC<CarSectionProps> = ({
   onAddToCart,
   onSelectModel,
 }) => {
+  const fallbackImg = "/images/gmc_suburban.jpg";
+
   return (
     <section className="py-8 bg-white border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,6 +57,9 @@ export const CarSection: React.FC<CarSectionProps> = ({
               <img
                 src={bannerImage}
                 alt={bannerTitle}
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = fallbackImg;
+                }}
                 className="w-full h-auto object-contain max-h-48 drop-shadow-md"
                 loading="lazy"
               />
@@ -76,6 +81,9 @@ export const CarSection: React.FC<CarSectionProps> = ({
                     <img
                       src={m.image}
                       alt={m.name}
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = fallbackImg;
+                      }}
                       className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                       loading="lazy"
                     />
