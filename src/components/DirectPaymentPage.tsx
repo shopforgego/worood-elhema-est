@@ -3,6 +3,13 @@ import { Lock, CreditCard, ArrowRight, Loader2, CheckCircle2, Globe } from 'luci
 import { storeConfig } from '../config/store';
 import { Logo } from './Logo';
 
+const PAYMENT_METHODS = [
+  { id: 'mastercard', alt: 'Mastercard', src: '/payment-methods/mastercard.svg', className: 'h-5' },
+  { id: 'visa', alt: 'Visa', src: '/payment-methods/visa.svg', className: 'h-3.5' },
+  { id: 'mada', alt: 'mada', src: '/payment-methods/mada.svg', className: 'h-4.5' },
+  { id: 'apple-pay', alt: 'Apple Pay', src: '/payment-methods/apple-pay.svg', className: 'h-4.5' },
+];
+
 export const DirectPaymentPage: React.FC = () => {
   const [lang, setLang] = useState<'ar' | 'en'>('en');
   const [amount, setAmount] = useState<string>('');
@@ -243,23 +250,25 @@ export const DirectPaymentPage: React.FC = () => {
               </div>
             </div>
 
-            {/* Payment Methods Accepted Banner */}
+            {/* Accepted payment methods */}
             <div className="pt-2 pb-1">
-              <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2">
-                {lang === 'ar' ? 'طرق الدفع المتاحة عبر بوابة بيزاتي:' : 'Supported payment methods:'}
+              <label className="block text-xs font-semibold text-slate-700 mb-2.5">
+                {lang === 'ar' ? 'طرق الدفع المقبولة' : 'Accepted payment methods'}
               </label>
-              <div className="flex flex-wrap items-center justify-between gap-2 p-3 bg-slate-50 border border-slate-200 rounded-2xl">
-                <div className="flex items-center gap-1.5 font-bold text-xs text-slate-800">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-                  <span>مدى (Mada)</span>
-                </div>
-                <div className="flex items-center gap-1.5 font-bold text-xs text-slate-800">
-                  <span className="text-sm font-black"></span>
-                  <span>Apple Pay</span>
-                </div>
-                <div className="flex items-center gap-1.5 font-bold text-xs text-slate-800">
-                  <span>Visa & MasterCard</span>
-                </div>
+              <div className="flex flex-wrap items-center gap-2" dir="ltr" aria-label="Accepted payment methods">
+                {PAYMENT_METHODS.map((method) => (
+                  <div
+                    key={method.id}
+                    title={method.alt}
+                    className="flex h-8 min-w-[54px] items-center justify-center rounded-md bg-white px-2.5 border border-slate-200 shadow-xs"
+                  >
+                    <img
+                      src={method.src}
+                      alt={method.alt}
+                      className={`${method.className} w-auto object-contain`}
+                    />
+                  </div>
+                ))}
               </div>
             </div>
 
