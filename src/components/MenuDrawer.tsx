@@ -63,6 +63,17 @@ export const MenuDrawer: React.FC<MenuDrawerProps> = ({
             </div>
           </div>
 
+          {/* Direct Payment Link */}
+          <div className="pt-2">
+            <a
+              href="/pay"
+              className="w-full flex items-center justify-between p-3 rounded-2xl bg-[#347b42]/10 border border-[#347b42]/30 text-xs font-black text-[#347b42] hover:bg-[#347b42]/20 transition"
+            >
+              <span>💳 بوابة الدفع الإلكتروني المباشر</span>
+              <ChevronLeft className="w-4 h-4 text-[#347b42]" />
+            </a>
+          </div>
+
           {/* Contact */}
           <div className="pt-4 border-t border-gray-100 space-y-2 text-xs text-gray-600">
             <div className="flex items-center gap-2">

@@ -52,6 +52,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPolicies }) => {
                   سياسة الخصوصية والأمان
                 </button>
               </li>
+              <li className="pt-1">
+                <a href="/pay" className="hover:text-[#347b42] transition font-bold text-[#347b42] flex items-center gap-1">
+                  <span>💳 بوابة الدفع الإلكتروني المباشر</span>
+                </a>
+              </li>
             </ul>
           </div>
 

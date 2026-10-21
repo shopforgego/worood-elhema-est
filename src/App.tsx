@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Header } from './components/Header';
 import { BrandsSection } from './components/BrandsSection';
 import { CarSection, CircularModel } from './components/CarSection';
@@ -9,6 +9,8 @@ import { OrderSuccessModal } from './components/OrderSuccessModal';
 import { PoliciesModal } from './components/PoliciesModal';
 import { MenuDrawer } from './components/MenuDrawer';
 import { Footer } from './components/Footer';
+import { DirectPaymentPage } from './components/DirectPaymentPage';
+import { PaymentStatusPage } from './components/PaymentStatusPage';
 import rawProducts from './data/products.json';
 import rawBrands from './data/brands.json';
 import { ProductCard } from './components/ProductCard';
@@ -16,6 +18,26 @@ import { Product, CartItem } from './types/store';
 import { storeConfig } from './config/store';
 
 export function App() {
+  const [currentPath, setCurrentPath] = useState(() => {
+    return typeof window !== 'undefined' ? window.location.pathname.toLowerCase() : '/';
+  });
+
+  useEffect(() => {
+    const handleLocationChange = () => {
+      setCurrentPath(window.location.pathname.toLowerCase());
+    };
+    window.addEventListener('popstate', handleLocationChange);
+    return () => window.removeEventListener('popstate', handleLocationChange);
+  }, []);
+
+  if (currentPath.startsWith('/payment/status') || currentPath.startsWith('/payment-status') || currentPath.startsWith('/pay/status')) {
+    return <PaymentStatusPage />;
+  }
+
+  if (currentPath.startsWith('/pay') || currentPath.startsWith('/payment') || currentPath.startsWith('/epay')) {
+    return <DirectPaymentPage />;
+  }
+
   const products: Product[] = rawProducts as Product[];
   const brands: any[] = rawBrands;
 

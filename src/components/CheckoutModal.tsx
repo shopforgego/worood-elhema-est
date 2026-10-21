@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, ShieldCheck, Lock, CreditCard, Banknote, CheckCircle, Truck } from 'lucide-react';
+import { X, ShieldCheck, Lock, CreditCard, Banknote, CheckCircle, Truck, Loader2 } from 'lucide-react';
 import { CartItem } from '../types/store';
 import { storeConfig } from '../config/store';
 
@@ -28,26 +28,80 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
     notes: '',
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
   const subtotal = items.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
   const isFreeShipping = subtotal >= storeConfig.freeShippingThreshold;
   const shipping = isFreeShipping ? 0 : storeConfig.shippingCost;
   const total = subtotal + shipping;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setErrorMessage('');
+
     if (!formData.fullName || !formData.phone || !formData.district) {
       alert('يرجى ملء جميع الحقول الإلزامية (الاسم، الجوال، الحي)');
       return;
     }
+
     const orderNumber = `WRD-${Math.floor(100000 + Math.random() * 900000)}`;
-    onOrderSuccess({
-      orderNumber,
-      customer: formData,
-      items,
-      total,
-      paymentMethod,
-      date: new Date().toLocaleDateString('ar-SA'),
-    });
+
+    if (paymentMethod === 'cod') {
+      onOrderSuccess({
+        orderNumber,
+        customer: formData,
+        items,
+        total,
+        paymentMethod,
+        date: new Date().toLocaleDateString('ar-SA'),
+      });
+      return;
+    }
+
+    // Electronic payment via Payzaty (Mada, Apple Pay, Visa/MC)
+    setIsSubmitting(true);
+    try {
+      const origin = window.location.origin;
+      const responseUrl = `${origin}/payment/status?ref=${orderNumber}`;
+      const cancelUrl = `${origin}/?cancelled=true`;
+
+      const response = await fetch('/api/payment/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          amount: total,
+          customer: {
+            name: formData.fullName.trim(),
+            email: storeConfig.email,
+            phone: formData.phone.trim(),
+          },
+          reference: orderNumber,
+          response_url: responseUrl,
+          cancel_url: cancelUrl,
+          note: `طلب متجر #${orderNumber} - ${formData.city} (${formData.district})`,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success && data.checkout_url) {
+        try {
+          sessionStorage.setItem('payzaty_checkout_id', data.checkout_id || '');
+          sessionStorage.setItem('payzaty_amount', total.toFixed(2));
+          sessionStorage.setItem('payzaty_customer', formData.fullName.trim());
+          sessionStorage.setItem('payzaty_ref', orderNumber);
+        } catch (_) {}
+
+        window.location.href = data.checkout_url;
+      } else {
+        setErrorMessage(data.error || 'تعذر إنشاء جلسة الدفع الإلكتروني، يرجى المحاولة لاحقاً');
+        setIsSubmitting(false);
+      }
+    } catch (err: any) {
+      setErrorMessage('خطأ في الاتصال ببوابة الدفع، يرجى التحقق من الاتصال والمحاولة مجدداً');
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -163,11 +217,25 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
             </div>
           </div>
 
+          {errorMessage && (
+            <div className="p-3 bg-red-50 border border-red-200 text-red-700 text-xs rounded-xl font-bold">
+              {errorMessage}
+            </div>
+          )}
+
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-[#347b42] to-[#2d6838] hover:from-[#478f52] hover:to-[#386e40] text-gray-900 font-black py-3.5 rounded-xl shadow-lg shadow-[#3d7a46]/30 transition transform active:scale-95 text-sm"
+            disabled={isSubmitting}
+            className="w-full bg-gradient-to-r from-[#347b42] to-[#2d6838] hover:from-[#478f52] hover:to-[#386e40] text-white font-black py-3.5 rounded-xl shadow-lg shadow-[#3d7a46]/30 transition transform active:scale-95 text-sm flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60"
           >
-            تأكيد الطلب والدفع الفوري ({total.toFixed(2)} {storeConfig.currencySymbol})
+            {isSubmitting ? (
+              <>
+                <Loader2 className="w-4 h-4 animate-spin text-white" />
+                <span>جاري الاتصال ببوابة بيزاتي...</span>
+              </>
+            ) : (
+              <span>تأكيد الطلب والدفع الفوري ({total.toFixed(2)} {storeConfig.currencySymbol})</span>
+            )}
           </button>
         </form>
       </div>

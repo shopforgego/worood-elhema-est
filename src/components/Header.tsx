@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, ShoppingBag, Menu, Phone, ShieldCheck } from 'lucide-react';
+import { Search, ShoppingBag, Menu, Phone, ShieldCheck, CreditCard } from 'lucide-react';
 import { storeConfig } from '../config/store';
 import { Logo } from './Logo';
 
@@ -64,12 +64,20 @@ export const Header: React.FC<HeaderProps> = ({
             </a>
           </div>
 
-          {/* Left Section: Cart */}
-          <div className="flex items-center gap-2 sm:gap-4">
+          {/* Left Section: Electronic Payment + Cart */}
+          <div className="flex items-center gap-2 sm:gap-3">
+            <a
+              href="/pay"
+              className="flex items-center gap-1.5 bg-[#347b42]/10 hover:bg-[#347b42]/20 border border-[#347b42]/30 text-[#347b42] px-3 py-2 rounded-xl text-xs font-bold transition"
+              title="صفحة الدفع الإلكتروني المباشر"
+            >
+              <CreditCard className="w-4 h-4" />
+              <span className="hidden sm:inline">الدفع الإلكتروني</span>
+            </a>
 
             <button
               onClick={onOpenCart}
-              className="flex items-center gap-2 bg-[#f8f9fa] hover:bg-gray-100 border border-gray-200 text-gray-800 px-3 py-2 rounded-xl transition"
+              className="flex items-center gap-2 bg-[#f8f9fa] hover:bg-gray-100 border border-gray-200 text-gray-800 px-3 py-2 rounded-xl transition cursor-pointer"
             >
               <div className="relative">
                 <ShoppingBag className="w-5 h-5 text-[#347b42]" />
