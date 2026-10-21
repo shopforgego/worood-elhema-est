@@ -1,2 +1,2 @@
-import verifyHandler from '../payment/verify.ts';
+import verifyHandler from '../payment/verify';
 export default verifyHandler;

@@ -1,2 +1,2 @@
-import checkoutHandler from '../payment/checkout.ts';
+import checkoutHandler from '../payment/checkout';
 export default checkoutHandler;
