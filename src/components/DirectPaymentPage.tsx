@@ -251,11 +251,11 @@ export const DirectPaymentPage: React.FC = () => {
             </div>
 
             {/* Accepted payment methods */}
-            <div className="pt-2 pb-1">
-              <label className="block text-xs font-semibold text-slate-700 mb-2.5">
+            <div className="pt-2 pb-1 flex flex-col items-center text-center">
+              <label className="block text-xs font-semibold text-slate-700 mb-2.5 text-center">
                 {lang === 'ar' ? 'طرق الدفع المقبولة' : 'Accepted payment methods'}
               </label>
-              <div className="flex flex-wrap items-center gap-2" dir="ltr" aria-label="Accepted payment methods">
+              <div className="flex flex-wrap items-center justify-center gap-2" dir="ltr" aria-label="Accepted payment methods">
                 {PAYMENT_METHODS.map((method) => (
                   <div
                     key={method.id}
